@@ -6,7 +6,7 @@ function App() {
   const [file, setFile] = useState(null)
 
   const fetchRecords = async () => {
-    const response = await axios.get('http://127.0.0.1:8000/api/records/')
+    const response = await axios.get('https://breathe-esg-tech-assignment.onrender.com/api/records/')
     setRecords(response.data)
   }
 
@@ -15,7 +15,7 @@ function App() {
   }, [])
 
   const updateStatus = async (id, status) => {
-    await axios.put(`http://127.0.0.1:8000/api/records/${id}/status/`, {
+    await axios.put(`https://breathe-esg-tech-assignment.onrender.com/api/records/${id}/status/`, {
       status: status
     })
 
@@ -26,7 +26,7 @@ function App() {
     const formData = new FormData()
     formData.append('file', file)
 
-    await axios.post('http://127.0.0.1:8000/api/upload/', formData)
+    await axios.post('https://breathe-esg-tech-assignment.onrender.com/api/upload/', formData)
 
     fetchRecords()
   }

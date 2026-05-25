@@ -1,0 +1,4 @@
+source_type,activity_type,quantity,unit
+SAP,Diesel Fuel,500,Liters
+UTILITY,Electricity,12000,kWh
+TRAVEL,Flight Travel,300,km
